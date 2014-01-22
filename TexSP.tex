@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[cp1250]{inputenc}
+\usepackage{mathtools}
+\begin{document}
+\par Niech A bêdzie przekszta³ceniem liniowycm, \begin{math}e_1, e_2, \ldots, e_n\end{math} baz¹ w R, a $[a_{ik}]$ macierz¹ przkszta³cenia $A$ w tej bazie. Niech \newline
+\begin{equation}
+x=\zeta_1e_1+\zeta_2e_2+\ldots+\zeta_ne_n,
+\end{equation}
+\begin{equation}
+Ax=\eta_1e_1+\eta_2e_2+\ldots+\eta_ne_n.
+\end{equation}
+WyraŸmy wspó³rzêdne \begin{math}\eta_1,\eta_2,\ldots\eta_n\end{math} wektora $Ax$ przez wspó³rzêdne \begin{math}\zeta_1,\zeta_2,\ldots,\zeta_n\end{math} 		
+wektora $x$. Mamy
+\begin{displaymath}
+\begin{array}{c}
+Ax=A(\zeta_1e_1+\zeta_2e_2+\ldots+\zeta_ne_n)=\\
+=\zeta_1(a_{11}e_1+a_{21}e_2+\ldots+a_{n1}e_n)+\\
++\zeta_2(a_{12}e_1+a_{22}e_2+\ldots+a_{n2}e_n)+\\
+\dotfill \\
++\zeta_n(a_{1n}e_1+a_{2n}e_2+\ldots+a_{nn}e_n)=\\
+=(a_{11}\zeta_{1}+a_{12}\zeta_{2}+\ldots+a_{1n}\zeta_{n})e_1+\\
++(a_{21}\zeta_{1}+a_{22}\zeta_{2}+\ldots+a_{2n}\zeta_{n})e_2+\\
+\dotfill \\
++(a_{n1}\zeta_{1}+a_{n2}\zeta_{2}+\ldots+a_{nn}\zeta_{n})e_n+
+\end{array}
+\end{displaymath}
+A zatem, porównuj¹æ to ze wzorem (2), otrzymujemy
+\begin{displaymath}
+\begin{array}{c}
+\eta_1=a_{11}\zeta_{1}+a_{12}\zeta_{2}+\ldots+a_{1n}\zeta_{n},\\
+\eta_1=a_{21}\zeta_{1}+a_{22}\zeta_{2}+\ldots+a_{2n}\zeta_{n},\\
+\dotfill \\
+\eta_1=a_{n1}\zeta_{1}+a_{n2}\zeta_{2}+\ldots+a_{nn}\zeta_{n},\\
+\end{array}
+\end{displaymath}
+lub krócej
+\begin{equation}
+\eta_i=\sum_{k=1}^na_{ik}\zeta_k.
+\end{equation}
+\par Tak wiêc \textit{je¿eli przeszta³cenie liniowe $A$ ma w danej bazie \begin{math}e, e,\ldots,e\end{math} macierz $[a_{ik}]$, to wektory bazy przekszta³acaj¹ siê za pomoc¹ kolumn tej macierzy (wzór(3)), a wspó³rzêdne dowolnego wektora $x$ za pomoc¹ jej wierszy (wzór(3)).}
+\par \textbf{3. Dodawanie i mno¿enie przekszta³ceñ liniowych.} Przekszta³cenia liniowe mo¿na dodawaæ 
+i mno¿yæ.
+\par OKREŒLENIE 2. \textit{Iloczynem przekszta³ceñ liniowych A i B} nazywamy przekszta³cenia $C$
+polegaj¹ce na kolejnym najpierw przekszta³cenia $B$, a nastêpnie przekszta³cenia $A$.
+\par Inaczej mówi¹c: $C = AB$ oznacza, ¿e dla ka¿dego $x$ jest $Cx = A(Bx)$.
+\par Iloczyn przekszta³ceñ liniowych jest przekszta³ceniem liniowym, tj, spe³nia warunki
+$1^o$ i $2^o$. Rzeczywiœcie,
+\begin{displaymath}
+\begin{array}{c}
+C(x_1+x_2)=A[B(x_1+x_2)]=A(Bx_1+Bx_2)= \\
+					=ABx_1+ABx_2=Cx_1+Cx_2
+\end{array}
+\end{displaymath} 
+%
+%
+Pierwsza równoœæ napisaliœmy na podstawie okreœlenia iloczynu, drug¹ na podstawie
+w³asnoœæi $1^o$ dla przekszta³cenia $B$, trzeci¹ na mocy tej samej w³asnoœci dla przekszta³cenia $A$
+i wreszcie czwart¹ znów na mocy okreœlenia iloczynu.
+\par Analogicznie wykazuje sie, ¿e $C(\lambda x)=\lambda Cx$
+\par Je¿eli $E$ jest przekszta³ceniem jednostkowym, a $A$ dowolnym przekszta³ceniem, to ³atwo
+sprawdziæ, ¿e
+\begin{displaymath}
+AE=EA=A.
+\end{displaymath}
+\par Jak zwykle, okreœlamy potêgi przekszta³cenia $A$:
+\begin{displaymath}
+A^2=A*A,\quad A^3=A^2*A,\quad \ldots
+\end{displaymath}
+Tak jak dla liczb okreœlamy $A^o=E$. Jest jasne, ¿e 
+\begin{displaymath}
+A^{m+n}=A^m*A^n.
+\end{displaymath}
+\par PRZYK£AD. Niech R bêdzie przestrzeni¹ wielomianów $P(t)$ stopnia nie wy¿szego ni¿
+$n-1$. Okreœlamy w niej przekszta³cenie $D$ wzorem
+\begin{displaymath}
+DP(t)=P'(t),
+\end{displaymath}
+gdzie $P'(t)$ jest pochodn¹ wielomianu $P(t)$. Wówczas dla dowolnego $P(t)$
+$D^2P(t)=D(DP(t))=(P'(t))'=P''(t)$.
+\par \textbf{Æwiczenie.} Wybierz w przestrzeni wielomianów stopnia nie wy¿szego ni¿ $n-1$ bazê podan¹
+w przyk³adzie 3 ustêpu 2 niniejszego paragrafu. ZnaleŸæ w tej bazie macierze przekszta³ceñ $D$, $D^2$, $D^3$,\ldots
+\par Wiemy, ¿e przy danej bazie \begin{math}e_1, e_2,\ldots, e_n\end{math} ka¿demu przekszta³ceniu liniowemu odpowiada macierz. Przypuœæmy, ¿e przekszta³ceniu $A$ odpowiada macierz $[a_{ik}]$, przekszta³ceniu $B$ macierz
+$[b_{ik}]$; znajdŸmy macierz $[c_{ik}]$ odpowiadaj¹c¹ przekszta³ceniu $C=AB$. Na mocy okreœlenia macierzy przekszta³cenia $C$ mamy
+\begin{equation}
+Ce_k=\sum_ic_{ik}e_i.
+\end{equation}
+Dalej
+\begin{equation}
+ABe_k=A(\sum_{j=1}^nb_{jk}e_j)=\sum_jb_{jk}Ae_j=\sum_{j, i}b_{jk}a_{ij}e_i
+\end{equation}
+Porównuj¹c wspó³czynniki przy $e_i$ w równoœciach (4) i (5) otrzymujemy 
+\begin{equation}
+C_{ik}=\sum_ja_{ij}b_{jk}.
+\end{equation}
+Widzimy, ¿e element $c_{ik}$ macirzey $C$ jast sum¹ iloczynów elementów i-tego wiersza miacierzy $A$ przez odpowiednie  elementy $k$-tej koloumny macierzy $B$. Tak okreœlona macierz
+\end{document}
