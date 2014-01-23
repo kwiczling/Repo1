@@ -40,7 +40,57 @@
 			<a href="tex.tex">
                 </noembed> 
 	<h1><p>Skrypt</p></h1>
+	<p>skrypt pokazujacy ktory z podanych plikow jest wiekszy</p>
+	<pre>
+	<code>
+	#!/bin/bash
 	
+	x=`cat $1 | wc l` 
+	y=`cat $2 | wc l` 
+
+	echo $x
+	echo $y
+
+	if [ $x -gt $y ]
+        	then echo "plik pierwszy ma wiecej znakow"
+        	else echo "plik drugi ma wiecej znakow" 
+	fi <br>
+	</code>
+	</pre>
+	<h1><p>Progam w C </p></h1>
+	<p>program rysuje trojkat z "*" w konsoli</p>
+	<pre>
+	<code>
+	
+#include <stdio.h>
+void main()
+{
+	int k,i,j,n,m;
+ 	n = 1;
+  	m  = 15;
+
+
+  	for(i = 0; i <  m; ++i)
+	{
+		for(k = 0; k <(m - n ); ++k)
+		{
+			printf(" ");
+		}
+
+      		for(j = 0; j <= i; ++j)
+		{
+			 if(n <= m)
+			 {printf("*"); ++n;}
+		}
+      		printf("\n");
+      
+	  	k = 0;
+	  	j = 0; 
+	}	  
+}
+</pre>
+</code>
+
       </section>
     </div>
 
